@@ -7,6 +7,12 @@ Convert human interval to TimeStamp
 * "45 min"
 * "60 seconds"
 
+## Known time measurements
+* seconds, second, secs, sec
+* minutes, minute, mins, min
+* hours, hour
+* days, day
+
 ## Include
 . .\HumanInterval.ps1
 
