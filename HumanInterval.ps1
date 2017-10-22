@@ -1,3 +1,9 @@
+<#
+Human Interval Converter by Quake4
+https://github.com/Quake4/HumanInterval
+License GPL-3.0
+#>
+
 class HumanInterval {
 	static [hashtable] $KnownIntervals = @{
 		"seconds" = "sec"
