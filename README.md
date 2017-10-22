@@ -23,7 +23,7 @@ Convert human interval to TimeStamp
 * $mins = (Get-Interval -Interval "1day 6hours 45 mins").TotalMinutes
 
 ## Requirements
-* PowerShell version >= 5.0
+PowerShell version >= 5.0
 
 ## License
 [GPL-3.0](https://github.com/Quake4/HumanInterval/blob/master/LICENSE)
