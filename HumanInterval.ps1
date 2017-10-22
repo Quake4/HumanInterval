@@ -1,5 +1,5 @@
 <#
-Human Interval Converter by Quake4
+Human Interval Converter v1.1 by Quake4
 https://github.com/Quake4/HumanInterval
 License GPL-3.0
 #>
@@ -18,6 +18,8 @@ class HumanInterval {
 		"hour" = "hour"
 		"days" = "day"
 		"day" = "day"
+		"weeks" = "week"
+		"week" = "week"
 	}
 
 	static [timespan] Parse([string] $interval) {
@@ -35,6 +37,7 @@ class HumanInterval {
 
 		$interval.Split(@(' ', ',', ';'), [System.StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
 			switch ($_) {
+				"week" { $days += $val * 7; $val = 0 }
 				"day" { $days += $val; $val = 0 }
 				"hour" { $hours += $val; $val = 0 }
 				"min" { $minutes += $val; $val = 0 }

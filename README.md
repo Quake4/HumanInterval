@@ -12,6 +12,7 @@ Convert human interval to TimeStamp
 * minutes, minute, mins, min
 * hours, hour
 * days, day
+* weeks, week (since v1.1)
 
 ## Include
 . .\HumanInterval.ps1
