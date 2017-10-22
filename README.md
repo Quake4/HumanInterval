@@ -16,4 +16,4 @@ Convert human interval to TimeStamp
 * PowerShell version >= 5.0
 
 ## License
-[GPL 3](https://github.com/Quake4/HumanInterval/blob/master/LICENSE)
+[GPL-3.0](https://github.com/Quake4/HumanInterval/blob/master/LICENSE)
