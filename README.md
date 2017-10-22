@@ -1,4 +1,4 @@
-# HumanInterval
+# Human Interval Converter
 Convert human interval to TimeStamp
 
 ## Example convert intervals
@@ -14,3 +14,6 @@ Convert human interval to TimeStamp
 
 ## Requirements
 * PowerShell version >= 5.0
+
+## License
+[GPL 3](https://github.com/Quake4/HumanInterval/blob/master/LICENSE)
