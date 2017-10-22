@@ -1,22 +1,22 @@
 class HumanInterval {
 	static [hashtable] $KnownIntervals = @{
-		"sec" = "seconds"
-		"secs" = "seconds"
-		"second" = "seconds"
-		"seconds" = "seconds"
-		"min" = "minutes"
-		"mins" = "minutes"
-		"minute" = "minutes"
-		"minutes" = "minutes"
-		"hour" = "hours"
-		"hours" = "hours"
-		"day" = "days"
-		"days" = "days"
+		"seconds" = "sec"
+		"second" = "sec"
+		"secs" = "sec"
+		"sec" = "sec"
+		"minutes" = "min"
+		"minute" = "min"
+		"mins" = "min"
+		"min" = "min"
+		"hours" = "hour"
+		"hour" = "hour"
+		"days" = "day"
+		"day" = "day"
 	}
 
 	static [timespan] Parse([string] $interval) {
 		$interval = $interval.ToLower()
-		[HumanInterval]::KnownIntervals.Keys | ForEach-Object {
+		[HumanInterval]::KnownIntervals.Keys | Sort-Object -Descending | ForEach-Object {
 			$interval = $interval.Replace($_, " " + [HumanInterval]::KnownIntervals."$_" + " ")
 		}
 		[int] $days = 0
@@ -29,10 +29,10 @@ class HumanInterval {
 
 		$interval.Split(@(' ', ',', ';'), [System.StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
 			switch ($_) {
-				"days" { $days = $val; $val = 0 }
-				"hours" { $hours = $val; $val = 0 }
-				"minutes" { $minutes = $val; $val = 0 }
-				"seconds" { $seconds = $val; $val = 0 }
+				"day" { $days = $val; $val = 0 }
+				"hour" { $hours = $val; $val = 0 }
+				"min" { $minutes = $val; $val = 0 }
+				"sec" { $seconds = $val; $val = 0 }
 				default {
 					if (![int]::TryParse($_, [ref] $val)) {
 						throw [Exception]::new("Unknow interval: $interval")
@@ -47,6 +47,6 @@ class HumanInterval {
 	}
 }
 
-function Get-Interval ([Parameter(Mandatory)] [string] $interval) {
-	[HumanInterval]::Parse($interval)
+function Get-Interval ([Parameter(Mandatory)] [string] $Interval) {
+	[HumanInterval]::Parse($Interval)
 } 

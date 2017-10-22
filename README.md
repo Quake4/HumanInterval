@@ -7,6 +7,9 @@ Convert human interval to TimeStamp
 * "45 min"
 * "60 seconds"
 
+## Include
+. .\HumanInterval.ps1
+
 ## Usage
 * [TimeStamp] $ts = [HumanInterval]::Parse("30 sec")
 * $secs = [HumanInterval]::Parse("5 min 30 sec").TotalSeconds
