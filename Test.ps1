@@ -5,6 +5,8 @@ $tests = @{
 	"30minutes1secs1days" = 24*60*60+30*60+1
 	"2hours 3mins1 secs" = 2*60*60+3*60+1
 	"2hours 15 min" = 2*60*60+15*60
+	"2hours 2hours 15 min 1 min" = 4*60*60+16*60
+	"90 min" = 90*60
 }
 
 $tests.Keys | ForEach-Object {

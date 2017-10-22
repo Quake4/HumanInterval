@@ -29,10 +29,10 @@ class HumanInterval {
 
 		$interval.Split(@(' ', ',', ';'), [System.StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
 			switch ($_) {
-				"day" { $days = $val; $val = 0 }
-				"hour" { $hours = $val; $val = 0 }
-				"min" { $minutes = $val; $val = 0 }
-				"sec" { $seconds = $val; $val = 0 }
+				"day" { $days += $val; $val = 0 }
+				"hour" { $hours += $val; $val = 0 }
+				"min" { $minutes += $val; $val = 0 }
+				"sec" { $seconds += $val; $val = 0 }
 				default {
 					if (![int]::TryParse($_, [ref] $val)) {
 						throw [Exception]::new("Unknow interval: $interval")
