@@ -33,7 +33,6 @@ class HumanInterval {
 		[int] $seconds = 0
 
 		[int] $val = 0
-		[string] $measure = $null
 
 		$interval.Split(@(' ', ',', ';'), [System.StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
 			switch ($_) {
