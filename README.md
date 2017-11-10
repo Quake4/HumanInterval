@@ -15,7 +15,9 @@ Convert time human interval to TimeStamp
 * weeks, week (since v1.1)
 
 ## Include
+```powershell
 . .\HumanInterval.ps1
+```
 
 ## Usage
 ```powershell
