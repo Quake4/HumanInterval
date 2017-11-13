@@ -34,7 +34,7 @@ class HumanInterval {
 
 		[int] $val = 0
 
-		$interval.Split(@(' ', ',', ';'), [System.StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
+		$interval.Split(@(' ', ',', ';'), [StringSplitOptions]::RemoveEmptyEntries) | ForEach-Object {
 			switch ($_) {
 				"week" { $days += $val * 7; $val = 0 }
 				"day" { $days += $val; $val = 0 }
