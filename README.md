@@ -1,7 +1,7 @@
 # Human Interval Time Converter
 Convert time human interval to TimeStamp
 
-## Example convert time intervals
+## Example of time interval conversion
 * "1 hour 30 sec"
 * "1 day 12 hours 30 minutes"
 * "40min 300seconds"
