@@ -1,5 +1,5 @@
 <#
-Human Interval Converter v1.1 by Quake4
+Human Interval Converter v1.2 by Quake4
 https://github.com/Quake4/HumanInterval
 License GPL-3.0
 #>
