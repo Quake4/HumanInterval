@@ -29,6 +29,10 @@ $mins = (Get-Interval -Interval "1day 6hours 45 mins").TotalMinutes
 ```
 
 ### TimeSpan properties
+* Days - Gets the days component of the time interval.
+* Hours - Gets the hours component of the time interval.
+* Minutes - Gets the minutes component of the time interval.
+* Seconds - Gets the seconds component of the time interval.
 * TotalDays - Gets the value expressed in whole and fractional days.
 * TotalHours - Gets the value expressed in whole and fractional hours.
 * TotalMinutes - Gets the value expressed in whole and fractional minutes.
