@@ -20,12 +20,19 @@ Convert time human interval to TimeStamp
 ```
 
 ## Usage
+### Example
 ```powershell
 [TimeStamp] $ts = [HumanInterval]::Parse("30 sec")
 $secs = [HumanInterval]::Parse("5 min 30 sec").TotalSeconds
 $mins = (Get-Interval "2 hour 15 min").TotalMinutes
 $mins = (Get-Interval -Interval "1day 6hours 45 mins").TotalMinutes
 ```
+
+### TimeSpan properties
+* TotalDays - Gets the value expressed in whole and fractional days.
+* TotalHours - Gets the value expressed in whole and fractional hours.
+* TotalMinutes - Gets the value expressed in whole and fractional minutes.
+* TotalSeconds - Gets the value expressed in whole and fractional seconds.
 
 ## Requirements
 PowerShell version >= 5.0
