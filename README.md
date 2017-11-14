@@ -3,7 +3,7 @@ Convert time human interval to TimeStamp
 
 ## Example convert time intervals
 * "1 hour 30 sec"
-* "1 day"
+* "1 day 12 hours 30 minutes"
 * "45 min"
 * "60 seconds"
 
